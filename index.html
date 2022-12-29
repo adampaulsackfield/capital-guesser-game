@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Capital City Guesser</title>
+
+		<link rel="stylesheet" href="./styles/main.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<h1 class="header__heading">Capital City Guesser</h1>
+			<p class="header__subheading">Created by Adam Sackfield</p>
+		</header>
+
+		<section class="game">
+			<p id="question" class="game__question"></p>
+
+			<canvas id="map"></canvas>
+		</section>
+
+		<section id="modal" class="modal__container">
+			<article class="modal">
+				<p class="modal__time">In 1.77 seconds you clicked</p>
+				<p id="distance" class="modal__distance"></p>
+				<p id="answer" class="modal__question"></p>
+				<p class="modal__qScore">
+					You scored: <span id="qScore" class="qScore"></span>
+				</p>
+				<p class="modal__tScore">
+					Total Score: <span id="tScore" class="tScore"></span>
+				</p>
+			</article>
+
+			<button id="next">Next Question</button>
+		</section>
+
+		<script src="game.js" type="module"></script>
+	</body>
+</html>
