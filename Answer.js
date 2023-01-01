@@ -11,6 +11,7 @@ export class Answer {
 		this.qScore = document.getElementById('qScore');
 		this.tScore = document.getElementById('tScore');
 		this.distance = document.getElementById('distance');
+		this.time = document.getElementById('time');
 	}
 
 	calculateDistance() {
@@ -27,12 +28,13 @@ export class Answer {
 		const distance = this.calculateDistance();
 
 		// Exponential Drop-off - Used to drop off the score the further away the guess is
-		return Math.floor(distance < 2 ? 500 : 500 * Math.pow(2, -distance / 10));
+		return Math.floor(distance < 10 ? 500 : 500 * Math.pow(2, -distance / 10));
 	}
 
 	async updateDOM(score, totalScore, currentQuestion) {
 		this.qScore.textContent = `${score}`;
 		this.tScore.textContent = `${totalScore}`;
+		this.time.textContent = `1.77`;
 
 		await new Promise((resolve) => setTimeout(resolve, 2000));
 

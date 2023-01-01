@@ -1,7 +1,5 @@
-.show {
-	display: flex;
-}
+@use './variables' as *;
 
-.hide {
-	display: none;
+body {
+	background-color: $background !important;
 }

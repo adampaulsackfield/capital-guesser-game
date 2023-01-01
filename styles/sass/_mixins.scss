@@ -1,0 +1,8 @@
+@mixin btn {
+	border: none;
+	background: transparent;
+	border: solid 2px $orange;
+	border-radius: 18px;
+	padding: 8px;
+	color: $green;
+}

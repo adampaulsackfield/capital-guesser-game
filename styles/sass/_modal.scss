@@ -1,16 +1,19 @@
+@use './variables' as *;
+@import './mixins';
+
 .modal {
-	background-color: red;
 	width: 250px;
 	height: 300px;
 	padding: 20px;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 
+	background-color: $background;
 	color: white;
-	text-align: center;
+	border-radius: 20px;
 
 	&__container {
 		position: absolute;
@@ -29,12 +32,36 @@
 	}
 
 	&__time {
-		font-size: 1.2rem;
+		// font-size: 1.2rem;
+		&--actual {
+			color: $orange;
+		}
 	}
 
 	&__distance {
 		padding: 10px 0;
 		font-size: 2rem;
+		color: $orange;
+	}
+
+	&__qScore {
+		&--actual {
+			color: $orange;
+		}
+	}
+
+	&__tScore {
+		&--actual {
+			color: $orange;
+		}
+	}
+
+	&__button {
+		@include btn;
+	}
+
+	&__question {
+		font-size: 0.75rem;
 	}
 }
 

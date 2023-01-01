@@ -1,3 +1,6 @@
+@use './variables' as *;
+@import './mixins';
+
 .menu {
 	position: absolute;
 	top: 0;
@@ -12,28 +15,30 @@
 	align-items: center;
 
 	color: white;
-}
 
-.menu__content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.menu__heading {
-	font-size: 1.8rem;
-	margin-bottom: 1rem;
-}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.menu__button {
-	border: none;
-	outline: none;
-	background-color: transparent;
+	&__heading {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
 
-	padding: 8px;
-	border: solid 2px red;
-	border-radius: 12px;
-	color: white;
+	&__buttons {
+		&--start,
+		&--scores {
+			@include btn;
+		}
+	}
 }
 
 .hide {

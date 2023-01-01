@@ -14,39 +14,49 @@
 		</header>
 
 		<section class="game">
-			<p id="question" class="game__question"></p>
+			<div class="game__question-wrapper">
+				<p id="question" class="game__question"></p>
+			</div>
 
 			<canvas id="map" class="map"></canvas>
 		</section>
 
 		<section id="modal" class="modal__container">
 			<article class="modal">
-				<p class="modal__time">In 1.77 seconds you clicked</p>
+				<p class="modal__time">
+					In <span id="time" class="modal__time--actual"></span> seconds you
+					clicked
+				</p>
 				<p id="distance" class="modal__distance"></p>
 				<p id="answer" class="modal__question"></p>
 				<p class="modal__qScore">
-					You scored: <span id="qScore" class="qScore"></span>
+					You scored: <span id="qScore" class="modal__qScore--actual"></span>
 				</p>
 				<p class="modal__tScore">
-					Total Score: <span id="tScore" class="tScore"></span>
+					Total Score: <span id="tScore" class="modal__tScore--actual"></span>
 				</p>
-			</article>
 
-			<button id="next">Next Question</button>
+				<button id="next" class="modal__button">Next Question</button>
+			</article>
 		</section>
 
 		<section id="menu" class="menu">
 			<section class="menu__content">
 				<p class="menu__heading">Welcome to the Capital City Guesser Game</p>
+				<p>Choose how many questions you would like?</p>
 
-				<div>
-					<button id="start" class="menu__button menu__button--start">
-						Start Game
-					</button>
-					<button class="menu__button menu__button--scores">
-						View High Scores
-					</button>
-				</div>
+				<form class="menu__form">
+					<label for="menu__rounds">
+						<input type="radio" name="ten" id="rounds" /> 5
+						<input type="radio" name="ten" id="rounds" /> 10
+						<input type="radio" name="ten" id="rounds" /> 20
+					</label>
+
+					<div class="menu__buttons">
+						<button id="start" class="menu__buttons--start">Start Game</button>
+						<button class="menu__buttons--scores">View High Scores</button>
+					</div>
+				</form>
 			</section>
 		</section>
 

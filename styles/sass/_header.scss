@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .header {
 	display: flex;
 	flex-direction: column;
@@ -6,6 +8,7 @@
 	&__heading {
 		font-size: 3rem;
 		letter-spacing: 2px;
+		color: $orange;
 	}
 
 	&__subheading {

@@ -74,7 +74,7 @@ export class Game {
 		// Sets the current question and updates the DOM
 		this.currentQuestion = this.questions[this.currentQuestionIndex++];
 
-		this.questionElement.textContent = `Where is the Capital City: ${this.currentQuestion.capital}`;
+		this.questionElement.textContent = `Where is the Capital City: ${this.currentQuestion.capital}?`;
 	}
 
 	async handleAnswer(x, y) {
