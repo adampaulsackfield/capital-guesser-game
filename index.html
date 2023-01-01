@@ -4,7 +4,7 @@
 	<head>
 		<title>Capital City Guesser</title>
 
-		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/css/main.css" />
 	</head>
 
 	<body>
@@ -16,7 +16,7 @@
 		<section class="game">
 			<p id="question" class="game__question"></p>
 
-			<canvas id="map"></canvas>
+			<canvas id="map" class="map"></canvas>
 		</section>
 
 		<section id="modal" class="modal__container">
@@ -37,7 +37,16 @@
 
 		<section id="menu" class="menu">
 			<section class="menu__content">
-				<p>Welcome to the Capital City Guesser Game</p>
+				<p class="menu__heading">Welcome to the Capital City Guesser Game</p>
+
+				<div>
+					<button id="start" class="menu__button menu__button--start">
+						Start Game
+					</button>
+					<button class="menu__button menu__button--scores">
+						View High Scores
+					</button>
+				</div>
 			</section>
 		</section>
 

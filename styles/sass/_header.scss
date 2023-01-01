@@ -1,0 +1,14 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__heading {
+		font-size: 3rem;
+		letter-spacing: 2px;
+	}
+
+	&__subheading {
+		color: #c7c7c7;
+	}
+}

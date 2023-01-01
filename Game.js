@@ -5,6 +5,8 @@ export class Game {
 	constructor() {
 		this.canvas = null;
 		this.context = null;
+		this.startBtn = document.getElementById('start');
+		this.startMenu = document.getElementById('menu');
 		this.questionElement = document.getElementById('question');
 		this.next = document.getElementById('next');
 
@@ -27,6 +29,10 @@ export class Game {
 		this.image.src = './assets/images/world-1200x671.png';
 		this.canvas.width = this.image.width;
 		this.canvas.height = this.image.height;
+		this.startBtn.addEventListener('click', () => {
+			this.startMenu.classList.add('hide');
+			this.start();
+		});
 
 		// Draw World
 		this.image.onload = () => {
@@ -42,14 +48,10 @@ export class Game {
 
 	loadFlags() {
 		// User Guess Flag
-		this.flags.green.width = '15px';
-		this.flags.green.height = '15px';
-		this.flags.green.src = './assets/images/green-flag-small.png';
+		this.flags.green.src = './assets/images/green-flag-medium.png';
 
 		// Actual Location Flag
-		this.flags.red.width = '15px';
-		this.flags.red.height = '15px';
-		this.flags.red.src = './assets/images/red-flag-small.png';
+		this.flags.red.src = './assets/images/red-flag-medium.png';
 	}
 
 	start() {
@@ -122,7 +124,7 @@ export class Game {
 
 	addFlag(x, y, flag) {
 		// Adds a flag at the specified coordinates
-		this.context.drawImage(flag, x - 2, y - 15);
+		this.context.drawImage(flag, x - 2, y - 25);
 	}
 
 	end() {
@@ -133,4 +135,3 @@ export class Game {
 const game = new Game();
 game.createWorld();
 game.loadFlags();
-game.start();
